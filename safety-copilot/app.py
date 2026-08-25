@@ -1,6 +1,10 @@
+from pathlib import Path
+
 import streamlit as st
 
-st.set_page_config(page_title="AI Communication Safety Copilot", page_icon="logo.jpeg", layout="centered")
+LOGO_PATH = Path(__file__).parent / "logo.jpeg"
+
+st.set_page_config(page_title="AI Communication Safety Copilot", page_icon=str(LOGO_PATH), layout="centered")
 
 TONES = ["Professional", "Firm", "Diplomatic", "Concise"]
 
@@ -32,7 +36,7 @@ def generate_response():
 
 logo_col, title_col = st.columns([1, 5])
 with logo_col:
-    st.image("logo.jpeg", width=64)
+    st.image(str(LOGO_PATH), width=64)
 with title_col:
     st.title("AI Communication Safety Copilot")
 st.caption("Turn difficult workplace messages into professional, relationship-safe responses.")

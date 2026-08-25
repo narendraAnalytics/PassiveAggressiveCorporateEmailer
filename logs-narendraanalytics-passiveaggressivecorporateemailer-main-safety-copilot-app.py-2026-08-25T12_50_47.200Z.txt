@@ -1,0 +1,216 @@
+
+[     UTC     ] Logs for comm-safety-copilot.streamlit.app/
+────────────────────────────────────────────────────────────────────────────────────────
+[12:50:07] 🚀 Starting up repository: 'passiveaggressivecorporateemailer', branch: 'main', main module: 'safety-copilot/app.py'
+[12:50:07] 🐙 Cloning repository...
+[12:50:07] 🐙 Cloning into '/mount/src/passiveaggressivecorporateemailer'...
+
+[12:50:07] 🐙 Cloned repository!
+[12:50:07] 🐙 Pulling code changes from Github...
+[12:50:08] 📦 Processing dependencies...
+Using CPython 3.12.7
+Removed virtual environment at: /home/adminuser/venv/
+Creating virtual environment at: /home/adminuser/venv/
+Prepared 57 packages in 2.35s
+Installed 57 packages in 122ms
+ + altair==6.2.2
+ + annotated-types==0.8.0
+ + anyio==4.14.2
+ + attrs==26.1.0
+ + blinker==1.9.0[2026-08-25 12:50:14.111215] 
+ + certifi==2026.7.22
+ + cffi==2.1.1
+ + charset-normalizer==3.5.1
+ + click==8.4.2[2026-08-25 12:50:14.111497] 
+ + cryptography==50.0.0
+ + distro==1.9.0
+ + google-auth==2.57.0[2026-08-25 12:50:14.111739] 
+ + google-genai==2.19.0[2026-08-25 12:50:14.111979] 
+ + h11==0.16.0
+ + httpcore==1.0.9
+ +[2026-08-25 12:50:14.112240]  httptools==0.8.0
+ + httpx==0.28.1
+ + idna==[2026-08-25 12:50:14.112449] 3.19
+ + iniconfig==2.3.0
+ + itsdangerous==2.2.0
+ + jinja2==3.1.6
+ + jsonschema==4.26.0
+ + jsonschema-specifications==2025.9.1
+ + markupsafe==3.0.3
+ + narwhals==2.25.0
+ + numpy==2.5.2
+ +[2026-08-25 12:50:14.112670]  packaging==26.3
+ + pandas==3.0.5
+ + pillow==12.3.0
+ + pluggy==1.6.0
+ + protobuf==7.36.0
+ + pyarrow==25.0.1
+ + pyasn1==0.6.4[2026-08-25 12:50:14.112886] 
+ + pyasn1-modules==0.4.2
+ + pycparser==3.0
+ + pydantic==2.13.4
+ + pydantic-core==2.46.4
+ + pydeck==0.9.3
+ + pygments==2.21.0
+ + pytest==9.1.1
+ + python-dateutil==2.9.0.post0
+ + python-multipart==0.0.32
+ + referencing==[2026-08-25 12:50:14.113102] 0.37.0
+ + requests==2.34.2
+ + rpds-py==2026.6.3
+ + six==1.17.0
+ + sniffio==1.3.1
+ + starlette[2026-08-25 12:50:14.113325] ==1.6.0
+ + streamlit==1.62.0
+ + tenacity==9.1.4
+ + toml==0.10.2
+ + typing-extensions==4.16.0
+ + typing-inspection==0.4.4
+ + [2026-08-25 12:50:14.113528] urllib3==2.7.0
+ + uvicorn==0.52.4
+ + watchdog==6.0.0
+ + websockets==16.1.1
+[12:50:14] 🐍 Python dependencies were installed from /mount/src/passiveaggressivecorporateemailer/safety-copilot/uv.lock using uv-sync.
+[12:50:14] 📦 WARN: More than one requirements file detected in the repository. Available options: uv-sync /mount/src/passiveaggressivecorporateemailer/safety-copilot/uv.lock, poetry /mount/src/passiveaggressivecorporateemailer/safety-copilot/pyproject.toml. Used: uv-sync with /mount/src/passiveaggressivecorporateemailer/safety-copilot/uv.lock
+Check if streamlit is installed
+Streamlit is already installed
+[12:50:15] 📦 Processed dependencies!
+2026-08-25 12:50:19.196 Uvicorn server started on :::8501
+
+
+
+2026-08-25 12:50:23.077 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/elements/lib/image_utils.py", line 294, in image_to_url
+    with open(image, "rb") as f:
+         ^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'logo.jpeg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/runtime/memory_media_file_storage.py", line 205, in _read_file
+    with open(filename, "rb") as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'logo.jpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 136, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 837, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mount/src/passiveaggressivecorporateemailer/safety-copilot/app.py", line 35, in <module>
+    st.image("logo.jpeg", width=64)
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/runtime/metrics_util.py", line 628, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/elements/image.py", line 186, in image
+    marshall_images(
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/elements/lib/image_utils.py", line 447, in marshall_images
+    proto_img.url = image_to_url(
+                    ^^^^^^^^^^^^^
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/elements/lib/image_utils.py", line 306, in image_to_url
+    url = runtime.get_instance().media_file_mgr.add(image, mimetype, image_id)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/runtime/media_file_manager.py", line 277, in add
+    file_id = self._storage.load_and_get_id(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/runtime/memory_media_file_storage.py", line 155, in load_and_get_id
+    self._read_file(path_or_data)
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/runtime/memory_media_file_storage.py", line 208, in _read_file
+    raise MediaFileStorageError(f"Error opening '{filename}'") from ex
+streamlit.runtime.media_file_storage.MediaFileStorageError: Error opening 'logo.jpeg'
+2026-08-25 12:50:24.065 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/elements/lib/image_utils.py", line 294, in image_to_url
+    with open(image, "rb") as f:
+         ^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'logo.jpeg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/runtime/memory_media_file_storage.py", line 205, in _read_file
+    with open(filename, "rb") as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'logo.jpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 136, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 837, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mount/src/passiveaggressivecorporateemailer/safety-copilot/app.py", line 35, in <module>
+    st.image("logo.jpeg", width=64)
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/runtime/metrics_util.py", line 628, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/elements/image.py", line 186, in image
+    marshall_images(
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/elements/lib/image_utils.py", line 447, in marshall_images
+    proto_img.url = image_to_url(
+                    ^^^^^^^^^^^^^
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/elements/lib/image_utils.py", line 306, in image_to_url
+    url = runtime.get_instance().media_file_mgr.add(image, mimetype, image_id)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/runtime/media_file_manager.py", line 277, in add
+    file_id = self._storage.load_and_get_id(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/runtime/memory_media_file_storage.py", line 155, in load_and_get_id
+    self._read_file(path_or_data)
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/runtime/memory_media_file_storage.py", line 208, in _read_file
+    raise MediaFileStorageError(f"Error opening '{filename}'") from ex
+streamlit.runtime.media_file_storage.MediaFileStorageError: Error opening 'logo.jpeg'
+2026-08-25 12:50:26.387 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/elements/lib/image_utils.py", line 294, in image_to_url
+    with open(image, "rb") as f:
+         ^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'logo.jpeg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/runtime/memory_media_file_storage.py", line 205, in _read_file
+    with open(filename, "rb") as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'logo.jpeg'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 136, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 837, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mount/src/passiveaggressivecorporateemailer/safety-copilot/app.py", line 35, in <module>
+    st.image("logo.jpeg", width=64)
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/runtime/metrics_util.py", line 628, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/elements/image.py", line 186, in image
+    marshall_images(
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/elements/lib/image_utils.py", line 447, in marshall_images
+    proto_img.url = image_to_url(
+                    ^^^^^^^^^^^^^
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/elements/lib/image_utils.py", line 306, in image_to_url
+    url = runtime.get_instance().media_file_mgr.add(image, mimetype, image_id)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/runtime/media_file_manager.py", line 277, in add
+    file_id = self._storage.load_and_get_id(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/runtime/memory_media_file_storage.py", line 155, in load_and_get_id
+    self._read_file(path_or_data)
+  File "/home/adminuser/venv/lib/python3.12/site-packages/streamlit/runtime/memory_media_file_storage.py", line 208, in _read_file
+    raise MediaFileStorageError(f"Error opening '{filename}'") from ex
+streamlit.runtime.media_file_storage.MediaFileStorageError: Error opening 'logo.jpeg'
