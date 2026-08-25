@@ -49,7 +49,7 @@ safety-copilot/
 │   └── test_risk.py
 ├── data/
 │   └── red_team_cases.json   # Seeded adversarial test cases
-├── logo.jpeg
+├── logo.png
 └── plan.txt                  # Full build plan (local only, not pushed)
 ```
 

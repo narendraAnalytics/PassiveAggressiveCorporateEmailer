@@ -7,7 +7,7 @@ from core.models import RiskLevel, Tone
 from core.risk import SAFE_ALTERNATIVE, assess_risk
 from core.scenarios import NO_SCENARIO_LABEL, SCENARIOS
 
-LOGO_PATH = Path(__file__).parent / "logo.jpeg"
+LOGO_PATH = Path(__file__).parent / "logo.png"
 
 st.set_page_config(page_title="AI Communication Safety Copilot", page_icon=str(LOGO_PATH), layout="centered")
 
